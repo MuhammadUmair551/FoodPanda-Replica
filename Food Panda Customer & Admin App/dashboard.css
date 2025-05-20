@@ -5,8 +5,14 @@ body {
     background-color: #f4f6f9;
 }
 
+#selectedCategoryName {
+    font-family: "Poetsen One", sans-serif;
+    color: #E21B70 !important;
+
+}
+
 .sidebar {
-    background-color: #ff5b5b;
+    background-color: #E21B70;
     color: white;
     position: sticky;
     min-height: 100vh;
@@ -47,7 +53,7 @@ body {
 }
 
 .logout-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgb(255, 255, 255);
     scale: 1.05;
     transition: background 0.3s, scale 0.3s;
 }
@@ -57,9 +63,10 @@ body {
     min-height: 100vh;
     padding: 30px;
 }
+
 .card-text {
-  max-height: 20px;
-  overflow: auto;
+    max-height: 20px;
+    overflow: auto;
 }
 
 .Category-btn:hover {
@@ -67,6 +74,7 @@ body {
     scale: 1.05;
     transition: background 0.3s, scale 0.3s;
 }
+
 #unordered-list {
     list-style-type: none;
     background-color: #ececf1;
