@@ -1,21 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Instrument+Serif:ital@0;1&family=Poetsen+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
-.user-logo{
+.user-logo {
     font-family: "Poetsen One", sans-serif !important;
 }
-#categoryContainer:hover{
+
+#categoryContainer:hover {
     cursor: pointer;
     scale: 1.05;
 }
+
 body {
     background-color: #f8f9fa;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.navbar {
+.navbar, .order-btn {
     background-color: #E21B70;
 }
-
+.order-btn:hover{
+    border: black 1px solid;
+    color: black !important;
+}
 .navbar-brand,
 .nav-link,
 .welcome-text {
@@ -31,4 +36,21 @@ body {
 .card-img-top {
     height: 200px;
     object-fit: cover;
+}
+
+#cartSidebar {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s;
+    z-index: 1050;
+    overflow-y: auto;
+}
+
+#cartSidebar.open {
+    right: 0;
 }
