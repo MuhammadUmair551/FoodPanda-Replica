@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Instrument+Serif:ital@0;1&family=Poetsen+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    min-height: 100vh;
+    background-color: #f4f6f9;
+}
+
+.sidebar {
+    background-color: #ff5b5b;
+    color: white;
+    position: sticky;
+    min-height: 100vh;
+    top: 0;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    margin-top: 20px;
+}
+
+.sidebar a {
+    color: white;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    margin: 5px 0;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.logo {
+    font-family: "Poetsen One", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    scale: 1.05;
+    transition: background 0.3s, scale 1s;
+}
+
+.logout-btn {
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    scale: 1.05;
+    transition: background 0.3s, scale 0.3s;
+}
+
+.main-content {
+    overflow-y: auto;
+    min-height: 100vh;
+    padding: 30px;
+}
+.card-text {
+  max-height: 20px;
+  overflow: auto;
+}
+
+.Category-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    scale: 1.05;
+    transition: background 0.3s, scale 0.3s;
+}
+#unordered-list {
+    list-style-type: none;
+    background-color: #ececf1;
+}
+
+.card-img-top {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.card-caption {
+    max-height: 50px;
+    overflow: auto;
+}
+
+.card:hover,
+.btn:hover {
+    box-shadow: 0 8px 12px rgba(59, 130, 246, 0.25);
+}

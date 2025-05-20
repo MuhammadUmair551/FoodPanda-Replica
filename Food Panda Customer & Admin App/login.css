@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Instrument+Serif:ital@0;1&family=Poetsen+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background: linear-gradient(to right, #FEFFBE, #D7EBBA, #9AD2CB);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 2% auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.role-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.role-btns button {
+    width: 48%;
+}
+.welcome{
+    font-family:  "Poetsen One", sans-serif;
+}
+.btn-login{
+    background-color:#9AD2CB!important;
+}
+.btn-login:hover{
+    background-color:#D7EBBA!important;
+}
