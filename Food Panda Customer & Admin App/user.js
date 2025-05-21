@@ -49,7 +49,7 @@ function showItems(category) {
 
   filtered.forEach(item => {
     const col = document.createElement("div");
-    col.className = "col-md-4 mb-3";
+    col.className = "col-md-6 col-sm-6 col-lg-4 mb-3";
     col.innerHTML = `
           <div class="card h-100">
             <img src="${item.image}" class="card-img-top" alt="Item Image">

@@ -95,3 +95,14 @@ body {
 .btn:hover {
     box-shadow: 0 8px 12px rgba(59, 130, 246, 0.25);
 }
+
+@media screen and (max-width: 1176px) and (min-width: 768px){
+    .sidebar h4, .welcome-para, .dashboard-list {
+        font-size: small;
+    }
+}
+@media screen and (max-width: 330px){
+    .main-content > h2{
+        font-size: medium;
+    }
+}

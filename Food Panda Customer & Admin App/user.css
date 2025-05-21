@@ -54,3 +54,8 @@ body {
 #cartSidebar.open {
     right: 0;
 }
+@media screen and (max-width: 595px){
+    .welcome-text{
+        font-size: small;
+    }
+}

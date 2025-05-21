@@ -86,22 +86,31 @@ function selectCategory(name) {
 
 document.getElementById("itemForm").addEventListener("submit", function (e) {
     e.preventDefault();
+
     var category = this.getAttribute("data-category");
     var name = document.getElementById("itemName").value.trim();
     var description = document.getElementById("itemDescription").value.trim();
     var price = parseFloat(document.getElementById("itemPrice").value.trim());
-    var image = document.getElementById("itemImage").value.trim();
+    var imageInput = document.getElementById("itemImage");
 
-    if (!name || !description || !price || !image) {
+    if (!name || !description || !price || imageInput.files.length === 0) {
         alert("Please fill all fields");
         return;
     }
 
-    items.push({ category, name, description, price, image });
-    saveItems();
-    showItems(category);
-    this.reset();
+    var reader = new FileReader();
+    reader.onload = function (event) {
+        var base64Image = event.target.result;
+
+        items.push({ category, name, description, price, image: base64Image });
+        saveItems();
+        showItems(category);
+        document.getElementById("itemForm").reset();
+    };
+
+    reader.readAsDataURL(imageInput.files[0]);
 });
+
 
 function showItems(category) {
     var container = document.getElementById("itemList");
@@ -115,7 +124,7 @@ function showItems(category) {
 
     filtered.forEach((item, index) => {
         container.innerHTML += `
-      <div class="col-md-4 mb-3">
+      <div class="col-md-6 col-sm-6 col-lg-4 mb-3">
         <div class="card">
           <img src="${item.image}" class="card-img-top" style="height: 200px; object-fit: cover;" />
           <div class="card-body">
