@@ -65,7 +65,7 @@ function showItems(category) {
 }
 
 function addToCart(itemStr) {
-  const item = JSON.parse(itemStr);
+  var item = JSON.parse(itemStr);
   cart.push(item);
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCartCount();
@@ -119,11 +119,7 @@ function placeOrder() {
     alert("Cart is empty!");
     return;
   }
- Swal.fire({
-  title: "Your Order has been Placed!",
-  icon: "success"
-});
-  cart = [];
+  cart = [];  
   localStorage.removeItem("cart");
   updateCartCount();
   toggleCart();
